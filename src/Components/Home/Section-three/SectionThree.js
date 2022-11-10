@@ -1,8 +1,8 @@
-// import React from 'react';
+import React from 'react';
 
-// const SectionThree = () => {
-//     return (
-//         <>
+const SectionThree = () => {
+    return (
+        <>
 
 
             <section className="py-6 dark:bg-gray-800 dark:text-gray-50 lg:px-20">
