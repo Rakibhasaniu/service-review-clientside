@@ -1,3 +1,10 @@
+POINT
+-This Is My personal Food Delivery WebSite
+-There Are Review Section
+-User Can Add Service
+-User Can Also Add And Delete Review
+-To Sell All Details And Review Or Add Service you must be logged in
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

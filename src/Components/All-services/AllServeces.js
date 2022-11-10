@@ -8,7 +8,7 @@ const AllServeces = () => {
     const [loding, setLoder] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://door-server.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setLoder(false);

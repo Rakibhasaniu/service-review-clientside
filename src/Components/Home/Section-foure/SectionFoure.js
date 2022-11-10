@@ -73,7 +73,7 @@ const SectionFoure = () => {
 
 
                 <section className="dark:bg-gray-800 dark:text-gray-100 lg:px-20">
-                    <h2 className="text-3xl font-bold text-center py-5 ">My Widding Clients</h2>
+                    <h2 className="text-3xl font-bold text-center py-5 ">My Clients</h2>
                     <div className="flex justify-center">
                         <img className='w-10 md:w-16  mx-4 ' src="https://www.thegoodweddingcompany.com/wp-content/uploads/2019/03/the_good_wedding_company_logo_01_shield_512_QuZ_icon.ico" alt="" />
                         <img className='w-10 md:w-16 borders mx-4 rounded-full' src="https://pbs.twimg.com/profile_images/712126587605491712/bmxguoTC_400x400.jpg" alt="" />

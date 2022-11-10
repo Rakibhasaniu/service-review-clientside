@@ -14,10 +14,10 @@ const Home = () => {
 
     const [services, setServices] = useState([]);
 
-    useTitle('home photographer')
+    useTitle('To Your Door')
 
     useEffect(() => {
-        fetch('http://localhost:5000/servicesl')
+        fetch('https://door-server.vercel.app/servicesl')
             .then(res => res.json())
             .then(data => setServices(data))
             .catch(err => err.message)

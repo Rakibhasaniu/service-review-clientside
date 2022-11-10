@@ -40,7 +40,7 @@ const InputReview = () => {
 
         console.log(order)
 
-        fetch('http://localhost:5000/all-review', {
+        fetch('https://door-server.vercel.app/all-review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ const MyReviws = () => {
     const [myReview, setReview] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/all-reviews?email=${user?.email}`, {
+        fetch(`https://door-server.vercel.app/all-reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('Accesstoken')}`
             }
@@ -35,7 +35,7 @@ const MyReviws = () => {
     
         const agree = window.confirm(`are you sure is parson delete ${users._id}`)
         if (agree) {
-            fetch(`http://localhost:5000/all-reviews/${users._id}`, {
+            fetch(`https://door-server.vercel.app/all-reviews/${users._id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

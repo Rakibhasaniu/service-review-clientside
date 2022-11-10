@@ -12,7 +12,7 @@ const CardDetails = () => {
 
     useTitle('Card-Details')
     const services = useLoaderData();
-    const { img, title, price, rating, paragrap, _id } = services;
+    const { img, title, price, rating, paragrap, _id, details } = services;
 
     console.log(services);
     // ---------------- _id user -----------
@@ -21,7 +21,7 @@ const CardDetails = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/all-review?service=${_id}`)
+        fetch(`https://door-server.vercel.app/all-review?service=${_id}`)
             .then(res => res.json())
             .then(data => setReviws(data))
             .catch(err => console.log(err))
@@ -47,11 +47,11 @@ const CardDetails = () => {
                 <div className="lg:w-[56%] px-5">
                     <div className="flex justify-between">
                         <h1 className='block mb-2 dark:text-violet-400 text-2xl lg:text-3xl text-center mt-3'>1 Hour : {price}</h1>
-                        <h1 className='block  dark:text-amber-600 text-2xl lg:text-3xl text-center mt-3'>Rasting : {rating}</h1>
+                        <h1 className='block  dark:text-amber-600 text-2xl lg:text-3xl text-center mt-3'>Rating : {rating}</h1>
 
                     </div>
                     <span className="block mb-3 text-slate-300 text-bold text-2xl lg:text-3xl  my-2">{title}</span>
-                    <p className='text-[19px]  '>{paragrap}.. <span className='hidden lg:block'><br></br> <br></br>Priya gets cold feet during her wedding. Asha encourages her, realizing in turn that she truly loves Ravi. She goes to his family's restaurant to see him with another woman, and gives a speech about what a great guy he is. Priya and Nick marry and introduce DJ Spellbound at the reception.</span></p>
+                    <p className='text-[19px]  '>{details}.. </p>
                 </div>
 
                
@@ -69,7 +69,7 @@ const CardDetails = () => {
                                     <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
                                         <div className="block">
                                             <h1 className="text-3xl font-semibold leading-tight text-center lg:text-left">You  can add review this services ! </h1>
-                                            <p className='pl-1 py-2 text-2xl text-center md:text-start lg:text-start '>Total Reviws :  <span className='text-amber-600 text-bold'>{allReviws.length} count</span></p>
+                                            <p className='pl-1 py-2 text-2xl text-center md:text-start lg:text-start '>Total Review :  <span className='text-amber-600 text-bold'>{allReviws.length} count</span></p>
                                         </div>
                                         <Link to={`/add-reviws/${services?._id}`}>
                                             <button className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Add Reviews</button>

@@ -38,7 +38,7 @@ const AddServices = () => {
 
         form.reset();
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://door-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
