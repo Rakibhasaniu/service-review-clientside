@@ -1,21 +1,21 @@
-// import React from 'react';
-// import { PhotoProvider, PhotoView } from 'react-photo-view';
-// import { Link } from 'react-router-dom';
+import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Link } from 'react-router-dom';
 
-// const Cards = ({ services, index }) => {
-//     // console.log(services);
-//     return (
-//         <>
-//             <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+const Cards = ({ services, index }) => {
+    // console.log(services);
+    return (
+        <>
+            <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
 
-//                 <PhotoProvider>
-//                     <div className="foo">
-//                         <PhotoView key={index} src={services?.img}>
-//                             <img className='h-52 w-full' src={services?.img} alt="" />
-//                         </PhotoView>
-//                     </div>
-//                 </PhotoProvider>
-//                 {/* ----------------phot zoom ent--------------- */}
+                <PhotoProvider>
+                    <div className="foo">
+                        <PhotoView key={index} src={services?.img}>
+                            <img className='h-52 w-full' src={services?.img} alt="" />
+                        </PhotoView>
+                    </div>
+                </PhotoProvider>
+                {/* ----------------phot zoom ent--------------- */}
 
                 <div className="card-body">
                     <div className="justify-between flex">
