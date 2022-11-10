@@ -1,30 +1,30 @@
-// import React from 'react';
-// import { useEffect } from 'react';
-// import { useContext } from 'react';
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { toast } from 'react-toastify';
+import React from 'react';
+import { useEffect } from 'react';
+import { useContext } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-// import { AuthContext } from '../../Contexts/UseContext';
-// import useTitle from '../../hook/useTitle';
+import { AuthContext } from '../../Contexts/UseContext';
+import useTitle from '../../hook/useTitle';
 
-// const MyReviws = () => {
-//     useTitle('My-Reviews')
-//     const { user } = useContext(AuthContext);
+const MyReviws = () => {
+    useTitle('My-Reviews')
+    const { user } = useContext(AuthContext);
 
-//     const [myReview, setReview] = useState([]);
+    const [myReview, setReview] = useState([]);
 
-//     useEffect(() => {
-//         fetch(`http://localhost:5000/all-reviews?email=${user?.email}`, {
-//             headers: {
-//                 authorization: `Bearer ${localStorage.getItem('Accesstoken')}`
-//             }
+    useEffect(() => {
+        fetch(`http://localhost:5000/all-reviews?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('Accesstoken')}`
+            }
 
-//         })   // https://assignment-server-site-10.vercel.app/
-//             .then(res => res.json())
-//             .then(data => setReview(data))
-//             .catch(err => console.log(err))
-//     }, [user?.email])
+        })   // https://assignment-server-site-10.vercel.app/
+            .then(res => res.json())
+            .then(data => setReview(data))
+            .catch(err => console.log(err))
+    }, [user?.email])
 
  
 
